@@ -1,0 +1,1 @@
+{% extends 'links/base.html' %}{% block content %}<section class="auth"><h1>重要操作の再認証</h1><p>公開状態の変更・復元・緊急停止を行う前に、現在のパスワードと認証コードを確認します。再認証後、内容を確認して操作を再実行してください。</p><form method="post">{% csrf_token %}{{ form.as_p }}<button class="primary">再認証する</button></form></section>{% endblock %}

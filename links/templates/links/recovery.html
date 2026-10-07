@@ -1,0 +1,1 @@
+{% extends 'links/base.html' %}{% block content %}<h1>回復コードを安全に保管</h1><p>認証端末を失った場合に使用します。各コードは一度だけ使用でき、この画面でのみ表示します。</p><ul class="codes">{% for code in codes %}<li><code>{{ code }}</code></li>{% endfor %}</ul><a class="button primary" href="{% url 'dashboard' %}">保管してリンク一覧へ</a>{% endblock %}

@@ -1,0 +1,70 @@
+{
+  "updated_at": "2026-10-07",
+  "goal_complete": false,
+  "tests": {
+    "sqlite": {
+      "count": 48,
+      "exit_code": 0
+    },
+    "postgresql": {
+      "count": 50,
+      "includes_concurrency": 2,
+      "exit_code": 0,
+      "scope": "コミット9da0a4cの全機能48件と同時操作2件。使い捨てPostgreSQL 15"
+    },
+    "chromium": {
+      "count": 1,
+      "flows": [
+        "MFA登録",
+        "作成→公開→コピー→転送→停止→復元",
+        "本文選択→変換→コピー→公開"
+      ],
+      "axe_pages": 7,
+      "narrow_width": 320,
+      "exit_code": 0
+    }
+  },
+  "dependencies": {
+    "pinned": 12,
+    "audited": 12,
+    "skipped": 0,
+    "known_vulnerabilities": 0,
+    "exit_code": 0
+  },
+  "backup_restore": {
+    "verified": true,
+    "scope": "使い捨てSQLite、全設定の照合、復元DBからの実HTTP転送"
+  },
+  "performance": {
+    "scope": "localhost、PostgreSQL、HTTP、同時5接続、100リクエスト",
+    "wrong_redirects": 0,
+    "service_p95_ms": 47.63,
+    "http_p95_ms": 121.75,
+    "stop_reflection_ms": 48.18,
+    "production_slo_proven": false
+  },
+  "deployment": {
+    "docker_build_exit_code": 0,
+    "compose_config_verified": true,
+    "published": false,
+    "warning": "security.W021：所有ドメインとpreload登録は未確認",
+    "read_only_nonroot_check_exit_code": 0,
+    "nginx_syntax_verified": true
+  },
+  "unverified": [
+    "公開先・実ドメイン",
+    "運用責任者と通知先",
+    "利用規模・地域・予算・保持方針",
+    "本番PITR復元・削除再適用",
+    "実環境の性能・可用性・反映と監視",
+    "各OS実機・手動読み上げ・200%ズーム・利用者タスク評価",
+    "独立セキュリティとクリーンルームレビュー",
+    "移行の必要性と旧環境・データ・切替承認"
+  ],
+  "application_tree_sha256": null,
+  "latest_change": {
+    "description": "一括公開のDNS失敗時ロールバック・旧ドメイン解決・停止保持",
+    "sqlite_tests": 48,
+    "chromium_exit_code": 0
+  }
+}

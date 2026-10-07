@@ -1,0 +1,1 @@
+{% extends 'links/base.html' %}{% block content %}<section class="auth"><p class="eyebrow">安全なリンク運用</p><h1>ログイン</h1><p>個別アカウントと認証アプリで管理画面にアクセスします。</p><form method="post">{% csrf_token %}{{ form.as_p }}<button class="primary">ログイン</button></form><p class="hint">初回登録は運用者がサーバー上で行います。回復コードは一度だけ使えます。</p></section>{% endblock %}

@@ -1,0 +1,1 @@
+{% extends 'links/base.html' %}{% block content %}<h1>ワークスペース設定</h1><p>期間外転送先を空欄にすると、リンク固有の設定がない場合は状態ページを表示します。</p><form method="post" class="editor">{% csrf_token %}{{ form.as_p }}<button class="primary">設定を保存</button></form>{% endblock %}
